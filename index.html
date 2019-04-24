@@ -9,14 +9,22 @@
 </head>
 <body>
     <section class="canvas"></section>
-    <p class="curColorP">Current color:&nbsp;<span class="curColor"></span></p> 
+    <p class="curColorP">
+        Current color:&nbsp; <input class="curColor" type="color" value="#ffffff">&nbsp;
+        &nbsp;Current Instrument:&nbsp; <span class='instr'>Brush</span>/<span class='instr'>Fill</span>
+    </p> 
     <section class="ui"></section>
 
     <p>
         Size
-        <input name="size" class="size" type="range" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
-        <output id="textInput">10</output>
+        <input name="size" class="size" type="range" min="0" max="100" value="40" onchange="updateTextInput(this.value);">
+        <output id="textInput">40</output>
     </p>
+    <button class="undo">undo</button>
+    <button class="save">save</button>
+    <button class="load">load</button>
+    <button class="viewJson">view JSON</button>
+    <p class="JSON dnone"></p>
     <script src="./app.js"></script>
 </body>
 </html>
